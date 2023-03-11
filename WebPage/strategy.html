@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>About</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+
+    <div class="row">
+        <div class="logo">
+            <img src="Media/Flap.png"
+        </div>
+
+        <ul class="main-nav">
+            <li><a href="index.html"> HOME </a></li>
+            <li><a href="about.html"> ABOUT </a></li>
+            <li class="active"><a href="strategy.html"> AGENT STRATEGY </a></li>
+            <li><a href="results.html"> RESULTS </a></li>
+        </ul>
+
+    </div>
+
+    <div class="hero">
+
+        <h1> Q-Learning </h1>
+        <h2>In order to use Q-Learning to train the agent, we need to set the states and actions that are possible in
+            this game. The Q-table used to store the above aspects in csv format. This way the states and the
+            corresponding weights for each action, are in readable form. The trained agent with the respectful Q-table
+            is provided with the code. The alpha parameter can be either fixed for the whole learning process or it
+            can decay as the bird reaches higher and higher scores.</h2>
+        <h1> The States, Actions and Rewards</h1>
+        <h2>The states in this game can be defined in a lot of ways. This implementation uses the below info (in
+            form of number of pixels) to define each unique state.
+        </h2>
+        <ul>
+            <li>The x-distance between the bird and the upcoming low pipe</li>
+            <li>The y-distance between the bird and the upcoming low pipe</li>
+            <li>The y-velocity that the bird currently has</li>
+            <li>The y-distance between the bird and the second upcoming low pipe</li>
+        </ul>
+        <h2>The actions that the need to be weighted are the flap and no flap action. The rewards of the agent are 10
+            when the agent wins a point using the decided action and -1000 when the player dies. The -1000 "reward"
+            penalises the last 2 actions the player  The +10 reward approach is chosen in favour of 0 approach in order
+            to stop the bird from experimenting with new actions when deciding on an already experienced state. The
+            above might cause some over-fitting issues that can be examined in future project work.
+        </h2>
+
+    </div>
+    <div id="copyright">
+        <h3>Flappy  Bird Reinforcement Learning </h3>
+        <h3>Georgios Klioumis georgekliou@gmail.com</h3>
+    </div>
+</header>
+
+
+
+</body>
+</html>

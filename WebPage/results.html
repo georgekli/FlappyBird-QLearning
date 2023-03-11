@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>About</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+
+    <div class="row">
+        <div class="logo">
+            <img src="Media/Flap.png"
+        </div>
+
+        <ul class="main-nav">
+            <li><a href="index.html"> HOME </a></li>
+            <li><a href="about.html"> ABOUT </a></li>
+            <li><a href="strategy.html"> AGENT STRATEGY </a></li>
+            <li class="active"><a href="results.html"> RESULTS </a></li>
+        </ul>
+
+    </div>
+
+    <div class="hero">
+
+        <h1> Score during aging </h1>
+        <h2>As the bird ages (experiences more deaths) the Q-table becomes more and more aware of the strategy needed
+            to get a really high game score. The image below depicts score metrics of the agent with respect to the
+            times that he died (episodes). The alpha parameter is defined as 0.9 and the decaying factor is 0.95.
+        </h2>
+        <div>
+            <img src="Media/RestNoAlphaDecay.png" class="center">
+        </div>
+        <h1> Best Score during aging using alpha decay </h1>
+        <h2> The alpha decay mechanism deacayed the alpha value initially down to 0.75 on the 5000th episode and the results
+            can be seen below.
+        </h2>
+        <div>
+            <img src="Media/ResADec.png" class="center">
+        </div>
+        <h2> Afterwards another alpha decay mechanism was developed to decay the alpha value down to 0.1 on the 5000th episode.
+            The results were not as good.
+        </h2>
+        <div>
+            <img src="Media/ResADecMax.png" class="center">
+        </div>
+        <h1>Epsilon-Greedy </h1>
+        <h2>During the experimental phase of the development of this project, a mechanism was designed to decide
+            randomly on flapping on not flapping, 1 in 10 times that a new state was processed. The above chance was
+            decayed as the agent's learning progressed and was set to 0 at around 3000 deaths. The
+            above mechanism was not successful as it lost the game quite quickly and penalised actions that might
+            otherwise be correct (last 2 states). It is sure though, that the mechanism was beneficial for the
+            quick exploration of new moves. The results can be seen below.
+        </h2>
+        <div>
+            <img src="Media/ResEpsilon.png" class="center">
+        </div>
+        <h2>Further information about the performance are in the Report, which can be downloaded from the home page</h2>
+    </div>
+    <div id="copyright">
+        <h3>Flappy  Bird Reinforcement Learning </h3>
+        <h3>Georgios Klioumis georgekliou@gmail.com</h3>
+    </div>
+</header>
+
+
+
+</body>
+</html>
